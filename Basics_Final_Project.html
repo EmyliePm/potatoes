@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Potatoes</title>
+    <style>
+      body {
+        background: linear-gradient(
+          109.6deg,
+          rgba(74, 131, 105, 0.521) 11.2%,
+          rgba(11, 132, 145, 0.445) 91.1%
+        );
+      }
+      .infoBorder {
+        display: block;
+        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+        border-radius: 10px;
+        background-color: white;
+        max-width: 50%;
+        padding: 10px;
+        margin: 0 auto;
+      }
+      h1,
+      h2,
+      .footer {
+        text-align: center;
+      }
+      h1 {
+        border: 1px solid #fff;
+        padding: 20px;
+        border-radius: 4px;
+      }
+      .potatoesIn_aCircle {
+        display: block;
+        margin: 0 auto;
+        padding: 5px 10px;
+        width: 150px;
+      }
+      .tay {
+        color: rgba(11, 132, 145, 0.445);
+      }
+      .samAndPoTayToes {
+        display: block;
+        margin: 0 auto;
+        padding: 5px 10px;
+        max-width: 100%;
+        max-height: 250px;
+      }
+      .potatoIntroParagraph {
+        font-family: monospace;
+        line-height: 20px;
+      }
+      .cheeseEmoji:hover {
+        cursor: pointer;
+      }
+      .cheeseLink {
+        text-decoration: none;
+        color: rgba(11, 132, 145, 0.445);
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        background-color: rgba(11, 132, 145, 0.445);
+        border: 1px solid rgba(74, 131, 105, 0.521);
+        padding: 10px;
+        border-radius: 4px;
+        transition: all 250ms ease-in-out;
+        cursor: pointer;
+      }
+      button:hover {
+        background: black;
+        color: rgba(11, 132, 145, 0.445);
+        border: 1px solid rgba(74, 131, 105, 0.521);
+        font-weight: bold;
+      }
+      .updateStyleH1 {
+        color: rgba(74, 131, 105, 0.521);
+      }
+      .updateStyleH2 {
+        color: rgba(74, 131, 105, 0.521);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="infoBorder">
+      <h1>
+        Poh-
+        <span class="tay">tay</span>
+        -toes
+      </h1>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/124/030/original/potatoesIn_aCircle.jpg?1713813247"
+        alt="Potatoes"
+        class="potatoesIn_aCircle"
+      />
+      <hr />
+      <h2>Boil them, Mash them, Stick them in a stew</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/124/032/original/pohtaytoes.jpg?1713813872"
+        alt="Sam Wise and potatoes"
+        class="samAndPoTayToes"
+      />
+      <p class="potatoIntroParagraph">
+        Potatoes are the unsung heroes of the culinary world. They turn every
+        meal into a delicious adventure. Who needs a knight in shining armor
+        when you have a spud in shining starch? Potatoes are the ultimate proof
+        that good things come in lumpy packages. They are extremely versatile.
+        They are with you through thick and thin, and never fail to mash up a
+        good time! Potatoes have the power to transform into crispy chips,
+        creamy mash, and cheesy dreams. (Feel free to have a look at this
+        <span class="cheeseEmoji">🧀</span> website
+        <span
+          ><a
+            href="https://cheese.fandom.com/wiki/Main_Page"
+            target="”_blank”"
+            class="cheeseLink"
+            >here</a
+          >.)</span
+        >
+        There are so many recepies that invlolve potaotes, and so many varieties
+        that we forget that the potato
+        <em>truly</em>
+        is the saviour of any cooking story.
+      </p>
+      <button>Try our Recepies here</button>
+    </div>
+    <p class="footer">Made by Emylie Periot-McCann</p>
+    <script>
+      function updateHeading(newHeading) {
+        let heading = document.querySelector("h1");
+        heading.innerHTML = newHeading;
+      }
+      function updateHeadingTwo(newHeadingTwo) {
+        let headingTwo = document.querySelector("h2");
+        headingTwo.innerHTML = newHeadingTwo;
+      }
+      function cheeseAlert() {
+        alert("🧀🧀🧀🧀🧀🧀🧀🧀🧀🧀🧀🧀🧀");
+      }
+      document
+        .querySelector(".cheeseEmoji")
+        .addEventListener("click", cheeseAlert);
+
+      function buyPrompt() {
+        let name = prompt("What is your name?");
+        if (name == null || name == "") {
+          alert("Name can't be blank");
+          return false;
+        }
+        let email = prompt("What is your email?");
+        if (email == null || email == "") {
+          alert("Email can't be blank");
+          return false;
+        } else {
+          updateHeading(
+            `<span class="updateStyleH1"🥔
+               <br />
+               Hi ${name}! we will contact you on ${email}</span>`
+          );
+          updateHeadingTwo(
+            `<span class="updateStyleH2">Get Ready for Delicious Potatoes!</span>`
+          );
+        }
+      }
+      let buyRecipe = document.querySelector("button");
+      buyRecipe.addEventListener("click", buyPrompt);
+    </script>
+  </body>
+</html>
